@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta para Nicol 💖</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', cursive;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ffb6c1, #ffc0cb);
+      overflow: hidden;
+      font-size: 18px;
+      flex-direction: column;
+    }
+
+    /* Corazones flotando */
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      transform: rotate(45deg);
+      animation: float 8s infinite ease-in;
+      opacity: 0.7;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(45deg); }
+      100% { transform: translateY(-120vh) rotate(45deg); }
+    }
+
+    /* Recuadro de contraseña */
+    .password-box {
+      border: 3px solid #d63384;
+      border-radius: 20px;
+      padding: 30px;
+      background: #fff0f5;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+      margin-bottom: 40px;
+      width: 300px;
+    }
+
+    .password-box h2 {
+      margin: 0 0 10px 0;
+      color: #d63384;
+    }
+
+    .password-box small {
+      color: #b03060;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .password-box input {
+      width: 80%;
+      padding: 10px;
+      border-radius: 10px;
+      border: 2px solid #d63384;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    /* Carta */
+    /* Carta */
+    .letter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 90%;          /* ancho ajustable al 90% del viewport */
+    max-width: 400px;    /* ancho máximo para pantallas grandes */
+    height: auto;        /* altura automática para adaptarse al contenido */
+    max-height: 90vh;    /* no sobrepasar el alto de la pantalla */
+    background: #fff0f5;
+    border-radius: 30px;
+    padding: 20px;       /* menos padding para móviles */
+    box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+    transition: transform 0.6s ease;
+    z-index: 10;
+    overflow-y: auto;    /* scroll si el contenido es demasiado largo */
+    }
+
+
+    .letter.open {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .letter h2 {
+      text-align: center;
+      color: #d63384;
+      font-size: 32px;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      margin-bottom: 12px;
+    }
+
+    .decor {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .message {
+      width: 100%;
+      height: 500px;
+      overflow-y: auto;
+      background: #fff;
+      border-radius: 20px;
+      border: 2px solid #ff69b4;
+      padding: 22px;
+      font-size: 19px;
+      color: #b03060;
+      font-family: 'Palatino Linotype', 'Book Antiqua', serif;
+      line-height: 1.7;
+    }
+
+    .message p {
+      margin-bottom: 16px;
+    }
+
+    .close-btn {
+      margin-top: 14px;
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 30px;
+      background: #ff69b4;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      font-family: 'Segoe UI', sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Corazones -->
+  <script>
+    for (let i = 0; i < 25; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 5 + Math.random() * 5 + 's';
+      heart.style.opacity = Math.random();
+      document.body.appendChild(heart);
+    }
+  </script>
+
+  <!-- Recuadro de contraseña -->
+  <div class="password-box">
+    <h2>Contraseña</h2>
+    <small>(es tu nombre)</small>
+    <input type="text" id="passwordInput" placeholder="Escribe aquí" />
+  </div>
+
+  <!-- Carta -->
+  <div class="letter" id="letter">
+    <div class="decor">🌷💖🧸💖🌷</div>
+    <h2>Para mi Princesa</h2>
+    <div class="message">
+      <p><strong>Nicol,</strong></p>
+      <p>Hace poco que nos conocemos y aún me cuesta creer cómo el destino decidió cruzarnos por algo tan inesperado como Ometv. A veces la vida hace esas cosas raras que terminan siendo las más bonitas, y yo me siento increíblemente afortunado de que hayas aparecido en la mía.</p>
+      <p>Aunque la distancia esté ahí, siempre estás en mi mente. No sales de mi cabeza. Pienso en tus ojos marrones, tan dulces y profundos, en tus labios, en tu sonrisa perfecta y en esa risa que lo ilumina todo cuando aparece. Todo en ti tiene una forma especial de alegrarme el día, incluso sin estar cerca.</p>
+      <p>Me gustas, y eso ya lo sabes, pero quería decirlo de nuevo porque nunca está de más recordarlo.</p>
+      <p>Admiro mucho la persona que eres. Lo mucho que te preocupas por tu familia, lo duro que trabajas para poder estar con ellos y darles lo mejor. Sé que no es fácil, pero sigue esforzándote, no te rindas. Estoy seguro de que vas a lograr traerlos a tu lado y también cumplir tu sueño de estudiar lo que realmente te gusta. Mereces todo eso y más.</p>
+      <p>Quiero que sepas que no estás sola. Hay personas que te apoyan, que creen en ti y que quieren verte llegar muy alto. Yo soy una de ellas, siempre.</p>
+      <p>Y bueno… de tu pequeña debilidad por las compras mejor no decimos nada, que eso también forma parte de tu encanto jajaja.</p>
+      <p style="text-align:right; margin-top:20px;">Con cariño,<br><strong>Manuel</strong></p>
+    </div>
+    <button class="close-btn" onclick="closeLetter()">Cerrar carta 💕</button>
+  </div>
+
+  <script>
+    const letter = document.getElementById('letter');
+    const passwordInput = document.getElementById('passwordInput');
+
+    passwordInput.addEventListener('input', function() {
+      const input = passwordInput.value.trim();
+      if (input.toLowerCase() === 'nicol') {
+        letter.classList.add('open');
+      } else {
+        letter.classList.remove('open'); // opcional: cerrar si borra
+      }
+    });
+
+    function closeLetter() {
+      letter.classList.remove('open');
+    }
+  </script>
+
+</body>
+</html>
